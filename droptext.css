@@ -1,0 +1,56 @@
+
+.collapsed {
+    height: 1.2em;
+    overflow: hidden;
+    padding: 2px;
+    margin: 3px;
+    font-style:italic; 
+    border: 2px;
+    border-color: white;
+    border-style: outset
+}
+
+.dropActionBtn {
+    background: none;
+    color: white;
+}
+.drop-image  {
+    fill: none;
+    filter:invert(1.0) ;
+height: 1.2rem;
+align-self: center;
+}
+
+.expanded {
+    padding: 2px;
+    margin: 5px;
+    border-style: groove;
+    border-width: 2px;
+    border-color: white;
+    
+}
+.drop-header {
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    height: 1.2em;
+}
+
+.drop-heading {
+    font-weight: 700;
+    font-size: large ;
+    float: left;
+}
+.dropActionBtn {
+    float:right;
+}
+
+.drop-content {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 3px;
+    border-left: 3px solid cyan;
+
+}
+    

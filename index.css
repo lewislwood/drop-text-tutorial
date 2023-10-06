@@ -1,0 +1,67 @@
+@import "droptext.css";
+
+body {
+    background: black;
+color:yellow;
+}
+
+HEADER {
+    WIDTH: 100%;
+    DISPLAY: GRID;
+    place-items: CENTER;
+    border-style: double;
+    border-width: 5px;
+    margin: 5px;
+    background: #000080;
+    color: yellowgreen;
+}
+.banner-heading {
+    font-size:xx-large ;
+    font-weight: 800;
+}
+.banner-subheading {
+    font-size:xx-large;
+    font-weight: 250;
+}
+.debug-toolbar {
+    font-size: 1.2rem;
+    background: black;
+    color: white;;
+}
+
+.container  {
+width: 100%;
+padding: 5px;
+margin:  5px;
+display: grid;
+  grid-template-columns: minmax(350px, 700px) minmax(350px, 900px);  ;
+  justify-content: center;
+  grid-gap:10rem; 
+}
+
+.status {
+    color: cyan;
+    background:darkgreen;
+}
+.my-content, .instructions-container {
+    display: block;
+}
+footer {
+    width: 100%;
+display: grid;
+place-items: center;
+}
+.signature {
+    display: block;
+    font-size: large;
+    font-weight:300 ;
+
+}
+
+.hide-me {
+    position: absolute;
+    left: 10000;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="index.css" rel="stylesheet" />    
+    <title>Drop Text Sample</title>
+    <script src="./droptext.js" defer></Script>
+</head>
+<body>
+<button id="go-to-btn" class="hide-me">Go to main content</button>
+<header>
+    <button id="ad-btn">Audio Describe Page</button>
+
+    <div class="banner-heading">Drop Panel Text Component Tutorial</div>
+    <div class="banner-subheading">by Lewis L Wood</div>
+    <div class="debug-toolbar">
+        <span>
+            Debug Console:
+            <label for="debug-console-rd-visible">Visible            <input id="debug-console-rd-visible"  type="radio" name="debug-console" value="1"></label>
+            <label for="debug-console-rd-disabled">Disabled<input id="debug-console-rd-disabled"  type="radio" name="debug-console" value="0"></label>
+            <label for="debug-console-rd-sr">Screen Reader Only<input id="debug-console-rd-sr"  type="radio" name="debug-console" value="-1"></label>
+        </span>
+    </div>
+</header>
+
+    <div class="container">
+
+    <div class="my-content" role="main" title=""My Drop Examples Content>
+        <h1 id="main-content"tabindex=0>My Drop Examples Content Section</h1>
+        <p>Here I will display some drop text.  This effect and ability is much simplier in react, but it is nice to know how to do this in pure html form.  Enjoy and Happy coding.</p>
+        <p>
+            This tutorial I demonstrate coding techniques, especially if you are blind. This also shows the world How a blind programmer can do Full Stack programming.  They only need a decorator (similar to the engineer who builds houses.).  Also helps others out there understand why they may see some extra stuff in the code, that serves as guides for programmer who digest via senses only 1 line of code at a time. Sighted see multiple lines and are able to use a mouse and grid lines to grab stuff they need or want to analyze. 
+        </p>
+        <p>
+            The drop buttons I place within the drop panels, but in reality they can be placed anywhere. See they How To drop panel for implementation instructions. See detailed instructions drop panel for a list of how to develop it from scratch yourself.  
+        </p>
+    <div id="drop-template" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Drop Template Sample
+    </div>
+<button class="dropActionBtn" aria-controls="drop-template" aria-expanded="false" name="drop-action-button" aria-level="2">
+
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+    </div>
+<div name="drop-content"  class="drop-content"  aria-hidden="true">
+    <div id="design-content-sample">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deleniti voluptates sunt saepe provident totam ex blanditiis iste, excepturi, consequatur commodi magni cupiditate voluptas. Alias, quibusdam fugit ab, tenetur at vel saepe hic nam iure iusto dolore earum modi a nobis maiores, veritatis numquam quaerat quam sint illum delectus laborum ad. Explicabo modi, nemo earum exercitationem laudantium aperiam voluptatibus porro in dignissimos error corrupti cumque voluptatum dolor impedit tempore ducimus cupiditate cum incidunt veniam fugiat adipisci omnis! Corrupti pariatur quasi tempore eius delectus distinctio magni consequatur corporis tenetur voluptas explicabo eaque minus repellendus illum necessitatibus porro, eveniet dignissimos libero dolore a dolor! Magni neque ad praesentium temporibus illum nam natus iusto ducimus dolore sed, totam consectetur hic? Consectetur, iure ad mollitia ab animi molestiae esse perspiciatis aut quibusdam tempore cumque dolorem dicta repudiandae repellat? Odit blanditiis sint libero esse quam nulla ullam tempore sit, nostrum sequi tempora nobis vero commodi.</p>
+</div>
+</div>
+</div>
+
+<div id="drop11" class="collapsed" >
+
+    <div class="drop-header">
+<div tabindex="0"  class="drop-heading" role="heading" aria-level="3" name="drop-heading" >
+    How to ... implement
+</div>
+<button class="dropActionBtn" aria-controls="drop11" aria-expanded="false" name="drop-action-button"aria-level="0">
+    <img src="./images/expand.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+</div>
+<div name="drop-content"  class="drop-content" aria-hidden="true">
+    <div id="design-content-how">
+        <p>
+            This is a training project.  I sprinkled a few debug lines. Hopefully, this will show you how you can develop you own javascrip clientside and make work.Sighted will see an ugly debug cosole at the bottom, blind will hear a hole lot of lines and will want to press ctrl to silent the speech.  The debug console toolbar you can disable it via the radio button. Programmer can do it at the top of the javascript file. 
+        </p>
+        <p>
+            To Google or Firefox: I hope this inspires to add a flag and easy way to set focus on the developer console. This way we blind developers will not need to do this just for development.  Set a flag in the console to enable talking. Will need some security considerations of course. Otherwise, a hacker could may all web pages talk for those with screen readers, and that would be extremely annoying.
+        </p>
+        <p>
+            Easy to copy and create more drop text panels,. Even nesting them.
+        </p>
+<ul>
+    <li>Step 1 Object navigation (ctrl+shift+o) Type "#drop-template" then press enter to select it from object nav search.</li>
+    <li>If not already folded then fold it (ctrl+k, ctrl+l). Now copy the 2 folded lines.</li>
+    <li>Switch to design.html and paste with in the container.</li>
+    <li>In design.html object navigation  (ctrl+shift+o) enter #design There shoudl on ly be 1. Just prss enter to select it.</li>
+    <li>Fold the design section. Then cut it out .  Easier than trying to locate all the lines.</li>
+    <li>Type "div#design-content-myValue followed by the tab key. Then press enter to be on a blank line. Just below the div you created.</li>
+    <li>Type in your html and review it in the browser.</li>
+    <li>Once your html is the way you want it. Simply Object navigate  by your drop id you used. Then foldit and copy it.    </li>
+    <li>Now switch back to your index.html and place it where you want it. Paste, Save, and you are done.</li>
+    <li>Open browser and review it.</li>
+
+</ul>
+
+        </div>
+    
+        </div>
+</div>
+<div id="drop-5" class="collapsed" >
+    <div class="drop-header">
+<div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+    Resources
+</div>
+<button class="dropActionBtn" aria-controls="drop-5" aria-expanded="false" name="drop-action-button" aria-level="0">
+
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+</div>
+<div name="drop-content"  class="drop-content"  aria-hidden="true">
+<div id="design-content-resources">
+
+    <p>
+        You can clone this repository by coping the web address @ <a href="https://github.com/lewislwood/drop-text-tutorial">drop-text-tutorial repository</a>. Git clone is the best and preferred of developing. 
+    </p>
+    <p>
+       Perhaps you do not have git set up yet and want to get started right away. Then you can download this repository as a zip file @ <a href="https://github.com/lewislwood/drop-text-tutorial/zipball/main">Drop-Text-Tutorial Zip File</a> 
+    </p>
+<p><em><u>View Raw File Links</u></em></p>
+<ul>
+<li>        The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/index.html">index.html</a> file is the file you are currently viewing.    </li>
+<li>        The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/index.css">index.css</a> file is the general css styles. This  file imports the droptext.css file for droptext specific styles.    </li>
+<li>The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/droptext.css">droptext.css</a> file holds all the drop-text css styles. This file isimported in by index.css.    </li>
+<li></li>
+<li>
+The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/droptext.js">droptext.js</a> file is the javascript that gives lfe to the html for dropText.
+</li>
+<li>
+The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/design.html">design.html</a> is my staging area. Here I work out the html without a large overhead. When completed I copy it into the appropiate place in this index.html page. 
+</li>
+</ul>
+<p><em><u>Other Resources</u></em></p>
+<p>
+Never can get too much learning you vsCode IDE.The <a href="https://lewislwood.github.io/vsCode-Intro-Screen-Reader">vsCode Intoduction</a> is a really handy web site that helps you learn to utilize all the tricks to make your workflow faster and more accurate. At the bottom of this site is more resources from Microsoft Learning Center.
+</p>
+
+<p>
+I just have to share this svg web site. I a blind man created my first 2 svg icons. Just a simple plus and minus symbol I used for the drop buttons. I had them down (learning to finish) in 15 minutes. Give it a try yourself @ <a href="http://blindsvg.com">blindsvg.com</a>.
+</p>
+
+</div>
+</div>
+</div>
+
+</div>
+<!-- divider between columns/ myContent overview & Instructions column -->
+
+<div class="instructions-container">
+<h2>Instructions/ How To...</h2>
+<p>
+    Old adage: "you can give a man a fish and feed him for a day, or teach him and feed him for life."
+    Below you will find the steps I sued to create this drop down txt component in html as a blind developer. Sure the css could use some beautification, and perhaps some day a decorator will clean it up.
+    </p>p>
+    <p>
+        There are certain steps every developer must take in order to develop a component.  That is the most import concept here.  These steps can be applied to any component you develop. As a blind developer I have a few extra steps that sigheted do not concern themselves with.
+    </p>
+    <div id="drop-r0" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Detailed Instructions
+    </div>
+<button class="dropActionBtn" aria-controls="drop-r0" aria-expanded="true" name="drop-action-button" aria-level="0">
+
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-instructions">
+    <p>Where do you begin?  Best to go simple. SStart with a concept.</p>
+</div>
+
+    <!-- Nested drop panel level 1 -->
+    <div id="drop-r00" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 1 Envision a concept for the component
+    </div>
+<button class="dropActionBtn" aria-controls="drop-r00" aria-expanded="false" name="drop-action-button" aria-level="1">
+
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-envision">
+<ul>
+    <li>
+        <b>What do you envision?</b><br>
+        <p>This idea for this component came from a progrm rss group. This person wanted a drop text that would drop down from a heading and back up.</p> 
+    </li>
+    <li>
+        <b>How do you envision?</b>
+        <p>Have a panel that contains all the items and data.  This box would  expand revealing content ccontained within.</p>
+    </li>
+    <li>
+        <b>Heading & Icon location.</b>
+        <p>For simplicity I would contain the heading and icon on a single line at the top of the drop panel.</p>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+<div id="drop-r01" class="collapsed" >
+    <div class="drop-header">
+<div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+    Step 2 Layout HTML 
+</div>
+<button class="dropActionBtn" aria-controls="drop-r01" aria-expanded="false" name="drop-action-button" aria-level="1">
+
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+</div>
+<div name="drop-content"  class="drop-content"  aria-hidden="true">
+    <div id="design-content-html-layout"></div>      
+     <!-- Dropping nested level 2 -->
+    <div id="drop-r010" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 2a  Create Files needed
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r010" aria-expanded="false" name="drop-action-button" aria-level="1">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-files">
+            Create the following files:<b></b>
+       <ul>
+        <li>
+    index.html in vsCode. Simply type "!" followed by a tab key. This will create a complete HTML file.
+        </li>
+        <li>
+            index.css - I like a dark background so I immediately place  <br>
+            <pre>
+                body {
+                   background: black;
+                       color:  yellow;
+            }</pre>
+            <br>  Feel free to use whatever colors you desire. 
+    
+        </li>
+        <li
+        index.js - Leave blank for now. Later we will code it.
+        >
+        Last file is drop-text.css Leave blank for now.  This file will hold you drop-text specific css settings.
+    </li>
+       </ul> 
+        </div>
+    </div>
+    </div>
+    <div id="drop-r011" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 2b  Layout HTML
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r011" aria-expanded="false" name="drop-action-button" aria-level="1">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-html-code">
+            <p>Here is where you actually type out the HTL you will basically need. There will be alot of div's and you as a blind programmer will have to keep them straight. </p> So you will rely heavily on the keystroke fold (control + k, control + l).  This toggles the code and you end up with 2 lines of folded code. Means cutting and moving on requires you to selct 2 lines and move anywhere and paste it.
+            <p>I also make sure to to place identify attributes to the left. This way I hear what is imortant first when I go tdown the html. Example: div id="drop-r0"  means to me this is a right drop panel and the 1st one at level 0."</p>
+            <p>I use emmitters to create id, class attributes and sometimes others. example: div#drop-r0.drop-panel followed the tab key will generate the id and class for me.  Less chance for type-o's. I press enter so I can put content in between.</p>
+            <p>With that in mind We will need Outer div for the drop panel, div to keep the drop header elsements in a single line.
+             Inside the drop-header div I need to put a heading div and a button element.
+             <p>
+                Div heading will become my heading. Since regular headings can be buggers with their default settings. To accomplish this I take advantage of the role=heading and that means I will also a aria-level to tell screen readers what heading level this heading is. I will use css the style this myself.
+            </p>
+             <p>
+                The button element is contained within the drop-head to the right of the heading.
+             Button is the control action item. It also contains and img element. The aria-expanded attribute of the button will determine if initially expanded or collapsed. The aria-controls must be set to the  drop panel id. The img element wil point to a file called a name with the word "collaps" or "expand" in it. This way we simply replace the words with each other to swap the images. I will use sg files for this.</p><p>
+                         </p>
+             <p>
+                Lastly drop-content div which will contain the actual content that the drop down will expose when expanded and hide when collapsed. It must have the aria-hidden attribute. We will toggel the value from true or false to hide it from screen readers as well. We do not need a class to hide it, since the drop panel will resize and hide it from eyesight.
+             </p> 
+             </div>
+    </div>  
+    </div>
+    <div id="drop-r012" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 2c  Open in browser & the css file
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r012" aria-expanded="false" name="drop-action-button" aria-level="1">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-browser">
+            <p>Now open the index html file in a browser as well. Even if you are blind toatally. Do not worry if the format is all over. Those with some eyesight will notice that the stuff is all over the place and the heading and button icon are not side by side. </p>    
+            
+            <p>You should have the html file in editor group 1. Press control+1 to select that editor group.  Locate the top div  of the drop paneel. now go to the line above it and type in a container we will want to help design. A good size is 500px. So do the following:
+                div.mycontainer and tab to create a div with class mycontainer. Press enter. the colosing dive will appear on the next line, cut that line . Now fold the drop panel with control+k, control+l. Now go below the folded panel and paste the cclosing div you cut earlier. Now it is in a container. </p>
+                <p>Now press control + 2 to select the editor group 2. This group will be your css group. Now in theis group press control+shift + e to open the file explorer. Open the index.css. Top of the css file eter @import "droptext.css". </p After the body { css add the following scss. .mycontainer {
+                    width: 500px;
+                    border-style: solid;
+                    border-width: 5px;
+                }} I do the border because I have some vision and it shows me the container. I will remove the border later on. Border is optional.>
+                <p>Now your drop panel is constrained to a smaller space. This is about the size of many smart phones, so a good size to contain our design. </p>
+                <p>Now open the drop-text.css file in editor group 2. Now you have 2 css files in group 2. Simply control+tab to toggle between them. You will now start defining the classes. Drop-panel i set the width: 100%; means max width possible, the container will contain it for you. Later you will rmove the container constrainst and do a more dynamic setting. The heading and button want on 1 line. So do a .drop-head { width: 100%; display: inline-block; This forces them to be on one line. </p>
+                    <p>In order to get heading to left edge and button to right edge I sued the float attribute. .drop-heading { float: left and drop-action-button { float: right;  .</p>
+                        <p>image is contained the button elementI created 2 svg images to use a simple + and minus. You can do this well as <a href="http://blindsvg.com">Blind svg.com </a>.  Really easy to learn. I was creating these within 15 minutes. drop-image and button will require some special svg settings.  filter: inverted(1.0) this reverses the color and fill : none; is done on the image element. These 2 will make it visible on the dark background. I set the width to 1.2rem.  The rem is a root  font measurent. I set the height to slightly larger than the normal font size 1.2 since I am using a heading. in the same line.</p>
+                        <p>Drop-content and all droptext.css settings are in my css file. So refer to them for values.</p>
+                        <p>The drop-content div will not show since it has no data. So let us create some quick data using a loremipsum trick of vsCode.  Type loremipsum100 followed by the tab within the drop-content div. Now 100 characters of gibberish words appears. You can use a smaller number or larger..  This is what I used for min:</p> loremipsum150</p> between starting and ending paragrph elemnt tags.
+                        <p>Now change the class of drop-panel to collapsed and drop-content is still visible to screen readers. That is why you need aria-hidden="true" to hide it from the screen reader as well. Play with it. Have someone with eysight view it for you or use nvda object position/coordinates to locate them.</p>
+            </div>
+</div>
+    </div>
+</div>
+</div>
+<div id="drop-r02" class="collapsed" >
+    <div class="drop-header">
+<div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+    Step 3 Start writing javascript
+</div>
+<button class="dropActionBtn" aria-controls="drop-r02" aria-expanded="false" name="drop-action-button" aria-level="1">
+
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+</div>
+<div name="drop-content"  class="drop-content"  aria-hidden="true">
+    <div id="design-content-js">
+    <p>You will need vsCode open and a browser open as well for these javascript instructions. I will not go into exact detail, you can use my code as a reference.</p>
+    </div>
+    <div id="drop-r020" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 3a Link javascript file and verify file is working.
+    </div>
+    </div>  
+    <button class="dropActionBtn" aria-controls="drop-r020" aria-expanded="false" name="drop-action-button" aria-level="2">
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-addJS">
+            <p>Open the droptext.js file in vsCode in editor group 3 (control + 3). Add a few blank lines. Add Opening and closing braces and a blank line between. Now switch to editor groups 1 where index.html file is located.</p>
+    <p>
+        Just above the opening body tag is the head closing tag. Add a blank line and type the following "script[src="./droptext.js"]" followed by the tab key. You should get a script tag open and closing tags.  Your cursor will be in the space between the opening and closing tags. Cursor left to be inside the &gt; symbol. type in the word defer. This tells the browser not to run this file until all resources are loaded. Also implies type="module".  Now your script should be included.
+    </p>
+    <p>Now verify by adding some html at the bottom of the html file, just above the closing body tag. Type in the following "div#testJava" followed by tab key. Then type "JavaSript is loading..."  " Now you should have a div opening tag and ending tag with the text you typed in between. Save changes and switch to browser and view the index.html. Go to the bottom of the page and you should have the words  "JavaScript is Loading...". If not double check your html.
+        <p>
+    
+        </p>
+    </p>
+    <p>
+        Now switch to the droptext.js file in editor group 3 (ctrl+3). Your cursor should be on the blank line between the curly braces. Type the id you set the for div in the html file "testJava.innerHTML = "JavaScript Loaded successfully!!!!"".   Save changes and Refresh the browser (shift + f5). Now find the text at the bottom.  If JavaScript loaded it should say successfully !!!! what you typed. If you do not see this you have made a mistake somewhere, review and  address it. Thats it.
+    </p>
+            
+        </div>
+    </div>  
+    </div>
+    <div id="drop-r021" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 3b Blind users will want a Live console.
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r021" aria-expanded="false" name="drop-action-button" aria-level="2">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-live-console">
+<p>
+    People with eyesight open the developers console alongside their web page they are developing. So they get instant feed back on mistakes and more. I find it essential to get theis quick feedback as well. So I just make my own developer's console that is automatically read by my screen reader. Only a few minor changes and your off. 
+</p>
+<p>
+    Now that div code where you put thtml to tell if you loaded the js. Make the following changes:
+    <ul>
+        <li>Change the div id from "testJave to "aria-status-div" in order to by like me.</li>
+        <li>Add atribute role="alert". This makes the contents with come alive with screen readers.</li>
+        <li>Add atrtribute to the dive "aria-hiden="false"".  This will be used later to hide from your clients when showing page or testing layouts."</li>
+       <li>Remove test within the tags and ad the following "div#statusalert" followed by tab. This the id we will use for our console.    </li> 
+       <li>Now in editor group 3 the droptext.js file. add the following at the top of the javascript file.  "const alertStatus = document.selector("alertStatus");</li>
+       <li>
+        Now replace that line we had earlier  between the curly braces with "alertStatus.innerHTML = "We are now talking!!!"."
+       </li>
+    </ul>
+
+    <p>Save changes and view it in the browser.  Pres (ctrl+f5).  You should hear "We are talking now". Everytime you Reload (ctrl+f5).
+    </p>
+</p>
+<p>
+    Now let us create our own console function. I called it sayAlertStatus().  So go above the opening curly braces. Type "function sayAlertStatus( msg) {<br> alertStatus.innerHTML = msg + "&ltbr&gt" + alertStatus.innerHTML; };<br> }". 
+</p>
+<p>Now replace the line in between the braces with a call to our new console  Type "sayAlertStatus("I am the one talking now!!!");". Save changes and you should hear it in browser once you reload. Now you have a quick and handy way to debug and verify code is running properly.We will sprinkle this call everywhere and output it to our talking console.
+
+</p>
+        
+    </div>
+    </div>
+    </div>
+    <div id="drop-r022" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 3c Wire up some buttons - click event 
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r022" aria-expanded="false" name="drop-action-button" aria-level="2">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-click">
+        <p>
+            Create a function called initializeDrop()" move the alertStatus querySelector code here. Change the word Const for alertStatus at the top of the js file to the word "let" This way we can assign the fvalue later. So at top should be "let alertStatus;" Now inside the curly braces call initializeDrop();, just above the sayAlerStatus line.  Then verify by saving changes and reloading browser." Now you have a place to put all your initialize code.
+        </p>
+        <p>
+Now replace all the code between the curly braces with "document.addEventListener("DOMContentLoaded",(e) => {initializeDrop();})".
+This now will cause the browser to call this initializeDrop everytime you press f5. This makes it a good place to put a lot of code.  We will no longer modify the code between the curly braces.  So go to the initializeDrop function and add a sayAlerStatus("I am initializing"); Make sure not to call the sayAlertStatus until the alertStatus querySelector is set. Just a good practice.
+        </p>
+        <p>
+            Now youou will have muliple drop panels with drop-action-buttons on them.  They all will have a name attribute. So we need an array of of these buttons so that we can attach something to the click event.
+        </p>
+        <p>
+           Now add the following line: "const btns = document.querySelectorAll(`[name="drop-action-button"]`);" . This will return an array of buttons. Currently we are still developing so it will be an array of 1 buttton.  You will nedd to verify that there is data in the array. if (btns)  will do this check.
+        </p>
+        <p>
+        Now we will add the click event. So let us type "btns.forEach((btn) =&gt { sayAlertStatus("You clicked me!!!")});". Now save changes and reload browser. Now locate the button you created and click it.  You should here "You Click me!!". Congratualations you wired a button up. 
+        </p>
+    </div>
+    </div>
+    </div>
+</div>
+</div>  
+</div>
+
+<div id="drop-r03" class="collapsed" >
+    <div class="drop-header">
+<div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+    Step 4  Error handling, navigation, & misc
+</div>
+<button class="dropActionBtn" aria-controls="drop-r03" aria-expanded="false" name="drop-action-button" aria-level="1">
+<img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+</button>
+</div>
+<div name="drop-content"  class="drop-content"  aria-hidden="true">
+    <div id="drop-r030" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 4a Error Handling
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r030" aria-expanded="false" name="drop-action-button" aria-level="2">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-error">
+    <p>You always have the ability to sayAlertStatus(msg to get some kind of feed back. It is so easy. Add sayAlertStatus line save, reload browse. Now you sould hear it. That easy and fast.</p>
+    <p>
+        Try catch are always great at catching some of those elusive errors. So add them especially in more complex functionns.  The catch error you will want to sayAlertStatus the stack trace (error.stack). Then output error.message. This way when you hear it you can go to it. It is under a Heading level 5. So press the 5 key if you are using a screen reader. Cursor down from there and git the line number and description.  
+    </p>
+    <p>
+        JavaScript is always a bit of a pain. Golden rule is write small and check if it is on track. Javascript can send down an agonizing path if ou go to deep. It is a runtime language and that is one of the dropbacks. I prefer TypeScript  which is coding time error checking. That means you catch possible errors earlier and it forces you to learn good programming habits. Also as a blind programmer I love the completion capabilities in vsCode that are not as accurate in JavaScript.
+    </p>
+    </div>
+    </div>
+</div>
+    <div id="drop-r031" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 4b Navigation
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r031" aria-expanded="false" name="drop-action-button" aria-level="2">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+        <div id="design-content-nav">
+    <p>
+        I cannot emphasize how import code navigation is when developing. It would be impossible to do some of the more complex projects I have been coding. The HTML on this project is so large and complicated in navigation, it took all my abilities and then  some.
+    </p>
+    <p>
+Object navigation is awesome. HTML  you can object navigate by ids or classes. You can enter "#drop-r02"  or ".classname" or a tagname. So finding your tag is easier.
+css Object navigation lists all the media selectonrs. So jump right to <it class="JavaScript Object Naviagion lists all functions and variables. so just start typing. When you are over it, pres enter and you go right to it."></it>
+
+    </p>
+    <p>
+        Brace matching (ctrl+shift+"\")). CSS and js files are much easier when you use brace navigation. Press ctrl+shift+"\" and it will find matching pairs for any of the following: {}[]().  Makes it really easy to help track down those pesky " errors where you are missing are too many closing} ' or other. I simply press this key when on the brace and go to the matching one. If it is not where I was supposed to end up, I need to add or subtract a "}" to balance it.s 
+    </p>
+    <p>
+        The final useful navigation/edit super handy feature is folding code.  Sighted use that mouse to fold code, copy, cut, move, paste.  We simply fold the code to 2 lines of code. selct both lines and copy, cut, or just move past it. Since it is folded you only have to cursor past 2 lines and not 20 lines of code.  Also nice feature you know folded code is balanced at the outer matching items. HTML folding is absolutely neccessary and not that possible without utilizineg it. This page has many lines and sections of html, so I utilized folding alot.
+    </p>
+    </div>
+    </div>
+    </div>
+    <div id="drop-r032" class="collapsed" >
+        <div class="drop-header">
+    <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
+        Step 4c Miscellaneous & Notes
+    </div>
+    <button class="dropActionBtn" aria-controls="drop-r032" aria-expanded="false" name="drop-action-button" aria-level="2">
+    
+    <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
+    </button>
+    </div>
+    <div name="drop-content"  class="drop-content"  aria-hidden="true">
+    <div id="design-content-misc">
+<p><u><em>Enhancement considerations</em></u></p>
+        <p>
+            Converting drop-content into json content. This would make it where somebody could dynamically edit and put revised content on the fly.  But why do HTML since this will limit editors.  Also markdown is so much better. 
+        </p>
+        <p>
+            Markdown enhancement would have files such as "drop-r020.md" stored in a special folder like "/drop-content. Now only and editor needs to be able to edit markdown. Developer reads the md files and converts them to html places them in appropiate place. This can be the json process dynamically each time it is expanded. "
+        </p>
+        <p>
+            The above enhancements drawbacks are that SEO (search engines like googled not able to index the content. Similar as some react. Besides you might as well rewrite it in React
+        </p>
+        <p><em><u>Key Handling</u></em></p>
+        <p>
+            I added a windows key-up event listener in the initializeDrop() function. You use key-up, because their are too many events on key-down and the user maybe in the middle of pressing a modifier key (alt, ctrl, shift, ...). 
+            As with almost all event listeners you create, you will want to prevent  default proccessing of that event. Otherwise, other things will happen.  Sometimes that is desirable, so try it with and without. So in most cases it is e.preventDefault(); .  
+        </p>
+        <p><em><u>Drop Content I opted for</u></em></p>
+        <p>
+I created a seperate html file called design.html. Where I would stage the contents of one drop-content and generate the content html. This way I could easily edit and format it. Also editor can review it as well. 
+        </p>
+<p>
+    Implementation of this proccess is as follows. The design html I create a new div inside the container div. This container I set to 500px, since this is the typical and optimal responsive desgn width. Now my div I create I give it an id of "design-content-&ltcustom value&gt".  That way in Object navigation I can search by "#design-content" and get a list of all my design contient divs."
+    Type: "div#design-content-msc" followed by tab. Will create &ltdiv id="design-content-misc"$gt. Now I crate my content within.  When done simply fold cut and paste in drop-content div.  Another advantage my screen reader handles smaller files better and less annoying.
+</p>
+<p>*** Note: you can view my last design edit by replacing the index.htmml with design.html and you will see it.    
+</p>
+
+
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- closing container div tag below -->
+</div>
+
+<footer>
+<div id="aria-status-div" class="aria-status hide-me" aria-hidden="false">
+    <h5>Status Area for Debugging</h5>
+<div id="statusalert" class="status" role="alert">
+This is my alert area for debugging javascript.
+</div>
+<button id="clearAlert1" onclick="{ statusalert.innerHTML = '.'}">Clear Debug Console (alt + c)</button>
+</div>
+<div class="signature">
+    Powered by Lewis  L. Wood
+</div>
+
+</footer>
+
+</body>
+</html>
