@@ -13,10 +13,32 @@ maxSize: 600   // max size for the console.
 // if (alertStatus) alertStatus.innerHTML = "javascript wired up!!!"
 // else alert("alertStatus not found!!up!");
 
+const getParams = () => {
+    let params = (new URL(document.location)).searchParams;
+    let debugMode = params.get("debug");
+    if (debugMode) {
+        switch(debugMode) {
+case "visible" :
+    debugStatus = 1;
+    break;
+    case "disabled":
+        debugStatus = 0;
+        break;
+        case "blind" :
+            debugStatus = -1;
+        }; // switch
+
+    }; 
+
+    //   This was my verify roundreturn ` \n debug mode = ${debugMode}`;
+};  // getParams
+
 // audio describe page: Only works if debug console is on.
 const adPage = () => {
-    if (debugStatus  ===0) alert("You must have the debug console enabled. Otherwise, programmer must create a dedictated area just for this.")
-    else {
+    if (debugStatus  ===0) {
+        alert(`You must have the debug console enabled. Otherwise, programmer must create a dedictated area just for this. `);
+
+}     else {
 const msg = `You are on the Drop Text Tutorial/demo page.<br>`+
 `There is a header area that contains a debug cosole toolbar.<br>`+
 `You can select visible to all sighted and blind, disabled, and screen reader only.<br>`+
@@ -219,6 +241,8 @@ sayAlertStatus(`Initialize error: ${error.message}`);
 }; // initalizeDrop
 
 {
+    // process params prior to everything
+    getParams ();
     //  auto run script at initialize
     // Run the initializeDrop function when all content is loaded.
     document.addEventListener("DOMContentLoaded",(e) => {initializeDrop();})
