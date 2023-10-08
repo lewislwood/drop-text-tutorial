@@ -124,21 +124,20 @@ It's fairly easy to copy and create more drop text panels,. Even nesting them.
 <li>        The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/index.html">index.html</a> file is the file you are currently viewing.    </li>
 <li>        The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/index.css">index.css</a> file is the general css styles. This  file imports the droptext.css file for droptext specific styles.    </li>
 <li>The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/droptext.css">droptext.css</a> file holds all the drop-text css styles. This file is imported by index.css.    </li>
-<li></li>
 <li>
 The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/droptext.js">droptext.js</a> file is the javascript that gives life to the html for this dropText example.
 </li>
 <li>
-The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/design.html">design.html</a> is my staging area. Here I work out the html without a large overhead. When completed I copy it into the appropriate place in the index.html page. 
+The <a href="https://raw.github.com/lewislwood/drop-text-tutorial/main/design.html">design.html</a> is my staging area. Here I work out the html without large overhead. When completed I copy it into the appropriate place in the index.html page.
 </li>
 </ul>
 <h2>Resources</h2>
 <p>
-You can never get too much learning on VSCode IDE. The <a href="https://lewislwood.github.io/vsCode-Intro-Screen-Reader">VSCode Introduction</a> is a really handy web site that helps you learn to learn and utilize many of the tips and tricks to help make your workflow more efficient. At the bottom of this site you will find more resources from Microsoft Learning Center.
+You can never get too much information about the VSCode IDE. The <a href="https://lewislwood.github.io/vsCode-Intro-Screen-Reader">VSCode Introduction</a> is a really handy web site that helps you learn to learn and utilize many of the tips and tricks to help make your workflow more efficient. At the bottom of this site you will find more resources from Microsoft Learning Center.
 </p>
 
 <p>
-I just have to share this svg web site. I a blind man created my first 2 svg icons. Just a simple plus and minus symbol I used for the drop buttons. I had them down (learning to finish) in 15 minutes. Give it a try yourself @ <a href="http://blindsvg.com">blindsvg.com</a>.
+I have to share this svg web site. I am a blind man who created my first two svg icons. Just simple plus and minus symbols I use for the drop buttons. I had the SVG creation process down in 15 minutes. Give the SVG creation tool a try yourself @ <a href="http://blindsvg.com">blindsvg.com</a>.
 </p>
 
 </div>
@@ -151,9 +150,9 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
 <div class="instructions-container">
 <h2>Instructions/ How To...</h2>
 <p>
-    Old adage: "you can give a man a fish and feed him for a day, or teach him and feed him for life."
-    Below you will find the steps I used to create this drop down txt component in html as a blind developer. The CSS could use some beautification, and perhaps some day a visually oriented designer will help clean it up.
-    </p>p>
+    Old adage: " you can give a man a fish and feed him for a day, or teach him how to fish and feed him for life."
+    Below you will find the steps I used to create this drop down txt component (also called an Accordion) in html as a blind developer. The CSS could use some beautification, and perhaps someday a visually oriented designer will help clean it up.
+    </p>
     <p>
         There are certain steps every developer must take in order to develop a component.  That is the most important concept here.  These steps can be applied to any component you develop. As a blind developer I have a few extra steps I need to take that sighted developers do not need to concern themselves with.
     </p>
@@ -169,14 +168,14 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-instructions">
-    <p>Where do you begin?  Best to go simple. SStart with a concept.</p>
+    <p>Where do you begin?  It's best to start simple. Start with a concept.</p>
 </div>
 
     <!-- Nested drop panel level 1 -->
     <div id="drop-r00" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 1 Envision a concept for the component
+        Step 1: Envision a concept for the component
     </div>
 <button class="dropActionBtn" aria-controls="drop-r00" aria-expanded="false" name="drop-action-button" aria-level="1">
 
@@ -188,11 +187,12 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
 <ul>
     <li>
         <b>What do you envision?</b><br>
-        <p>This idea for this component came from a progrm rss group. This person wanted a drop text that would drop down from a heading and back up.</p> 
+        <p>This idea for this component came from a programming RSS group. This person wanted a drop text that would drop down from a heading and back up.
+</p> 
     </li>
     <li>
         <b>How do you envision?</b>
-        <p>Have a panel that contains all the items and data.  This box would  expand revealing content ccontained within.</p>
+        <p>Have a panel that contains all of the items and data.  This box would  expand to reveal content within.</p>
     </li>
     <li>
         <b>Heading & Icon location.</b>
@@ -205,7 +205,7 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
 <div id="drop-r01" class="collapsed" >
     <div class="drop-header">
 <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-    Step 2 Layout HTML 
+    Step 2: Layout Your HTML 
 </div>
 <button class="dropActionBtn" aria-controls="drop-r01" aria-expanded="false" name="drop-action-button" aria-level="1">
 
@@ -218,7 +218,7 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
     <div id="drop-r010" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 2a  Create Files needed
+        Step 2a:  Create Files as Needed
     </div>
     <button class="dropActionBtn" aria-controls="drop-r010" aria-expanded="false" name="drop-action-button" aria-level="1">
     
@@ -227,10 +227,10 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-files">
-            Create the following files:<b></b>
+            Create the following files:
        <ul>
         <li>
-    index.html in vsCode. Simply type "!" followed by a tab key. This will create a complete HTML file.
+    index.html in VSCode. Simply type "!" followed by a tab key. This will create a complete HTML file.
         </li>
         <li>
             index.css - I like a dark background so I immediately place  <br>
@@ -245,7 +245,7 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
         <li
         index.js - Leave blank for now. Later we will code it.
         >
-        Last file is drop-text.css Leave blank for now.  This file will hold you drop-text specific css settings.
+        The last file is drop-text.css Leave it blank for now.  This file will hold your drop-text specific css settings.
     </li>
        </ul> 
         </div>
@@ -254,7 +254,7 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
     <div id="drop-r011" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 2b  Layout HTML
+        Step 2b:  Layout Your HTML
     </div>
     <button class="dropActionBtn" aria-controls="drop-r011" aria-expanded="false" name="drop-action-button" aria-level="1">
     
@@ -263,11 +263,14 @@ I just have to share this svg web site. I a blind man created my first 2 svg ico
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-html-code">
-            <p>Here is where you actually type out the HTL you will basically need. There will be alot of div's and you as a blind programmer will have to keep them straight. </p> So you will rely heavily on the keystroke fold (control + k, control + l).  This toggles the code and you end up with 2 lines of folded code. Means cutting and moving on requires you to selct 2 lines and move anywhere and paste it.
-            <p>I also make sure to to place identify attributes to the left. This way I hear what is imortant first when I go tdown the html. Example: div id="drop-r0"  means to me this is a right drop panel and the 1st one at level 0."</p>
-            <p>I use emmitters to create id, class attributes and sometimes others. example: div#drop-r0.drop-panel followed the tab key will generate the id and class for me.  Less chance for type-o's. I press enter so I can put content in between.</p>
-            <p>With that in mind We will need Outer div for the drop panel, div to keep the drop header elsements in a single line.
-             Inside the drop-header div I need to put a heading div and a button element.
+            <p>Here is where you will type out the relevant HTML you will need. There will be alot of div's and you, as a blind programmer, will have to keep them straight. </p> 
+<p>
+You will rely heavily on the keystroke "fold" (control + k, control + l). This toggles the code layout so you end up with 2 lines of folded code. This Means cutting and pasting requires you to select 2 lines and move anywhere and paste them.
+</p>
+            <p>I also make sure to place indentifiable attributes to the left. This way I hear what is imortant first when I navigate through the HTML. Example: div id="drop-r0"  means to me this is a right drop panel and the 1st one at level 0."</p>
+            <p>I use emmitters to create id, class attributes and sometimes others. example: div#drop-r0.drop-panel followed by the tab key will generate the id and class for me.  Less chance for typo's. I press enter to place unique content between.</p>
+            <p>With that in mind; We will need an Outer div for the drop panel, a div to keep the drop header elsements in a single line, and Inside the drop-header div we'll need to put a heading div and a button element.
+</p>
              <p>
                 Div heading will become my heading. Since regular headings can be buggers with their default settings. To accomplish this I take advantage of the role=heading and that means I will also a aria-level to tell screen readers what heading level this heading is. I will use css the style this myself.
             </p>
