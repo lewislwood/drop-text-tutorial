@@ -272,14 +272,14 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
             <p>With that in mind; We will need an Outer div for the drop panel, a div to keep the drop header elsements in a single line, and Inside the drop-header div we'll need to put a heading div and a button element.
 </p>
              <p>
-                Div heading will become my heading. Since regular headings can be buggers with their default settings. To accomplish this I take advantage of the role=heading and that means I will also a aria-level to tell screen readers what heading level this heading is. I will use css the style this myself.
+                A div heading will become my heading Since regular headings can be boogers with their default settings. To accomplish this I take advantage of the role=heading. I will also need an aria-level to tell screen readers what heading level this heading is. I will use css to style this myself.
             </p>
              <p>
                 The button element is contained within the drop-head to the right of the heading.
-             Button is the control action item. It also contains and img element. The aria-expanded attribute of the button will determine if initially expanded or collapsed. The aria-controls must be set to the  drop panel id. The img element wil point to a file called a name with the word "collaps" or "expand" in it. This way we simply replace the words with each other to swap the images. I will use sg files for this.</p><p>
-                         </p>
+             Button is the control action item. It also contains an IMG element. The aria-expanded attribute of the button will determine if initially expanded or collapsed. The aria-controls attribute must be set to the  drop panel id. The IMG element wil point to a file called a name with the word "collapse" or "expand" in it. This way we can simply replace the words with each other to swap the images. I will use SVG files for this.</p>
+
              <p>
-                Lastly drop-content div which will contain the actual content that the drop down will expose when expanded and hide when collapsed. It must have the aria-hidden attribute. We will toggel the value from true or false to hide it from screen readers as well. We do not need a class to hide it, since the drop panel will resize and hide it from eyesight.
+                Lastly, we'll need the drop-content div that contains the actual content that the drop down will expose when expanded and hide when collapsed. It must have the aria-hidden attribute. We will toggel the aria-hidden value from true or false to hide it from, or show it to, screen readers as well. We do not need a class to hide it, since the drop panel will resize and hide it in synchronization with the collapsed/expanded state.
              </p> 
              </div>
     </div>  
@@ -287,7 +287,7 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     <div id="drop-r012" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 2c  Open in browser & the css file
+        Step 2c:  Open in browser & the css file
     </div>
     <button class="dropActionBtn" aria-controls="drop-r012" aria-expanded="false" name="drop-action-button" aria-level="1">
     
@@ -296,22 +296,38 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-browser">
-            <p>Now open the index html file in a browser as well. Even if you are blind toatally. Do not worry if the format is all over. Those with some eyesight will notice that the stuff is all over the place and the heading and button icon are not side by side. </p>    
+            <p>Now open the index html file in a browser. Do not worry if the format is askew. Those with some eyesight will notice that the elements are all over the place and the heading and button icon are not side by side. </p>    
             
-            <p>You should have the html file in editor group 1. Press control+1 to select that editor group.  Locate the top div  of the drop paneel. now go to the line above it and type in a container we will want to help design. A good size is 500px. So do the following:
-                div.mycontainer and tab to create a div with class mycontainer. Press enter. the colosing dive will appear on the next line, cut that line . Now fold the drop panel with control+k, control+l. Now go below the folded panel and paste the cclosing div you cut earlier. Now it is in a container. </p>
-                <p>Now press control + 2 to select the editor group 2. This group will be your css group. Now in theis group press control+shift + e to open the file explorer. Open the index.css. Top of the css file eter @import "droptext.css". </p After the body { css add the following scss. .mycontainer {
+            <p>You should have the html file in editor group 1. Press control+1 to select that editor group.  Locate the top div  of the drop panel. now go to the line above it and type in a container name we will want to help design. A good size is 500px. So do the following:
+                div.mycontainer and tab to create a div with the class mycontainer, then Press enter. the closing div will appear on the next line, cut that line . Now fold the drop panel with control+k, control+l. Now go below the folded panel and paste the cclosing div you cut earlier. Now it is in a container. </p>
+                <p>Now press control + 2 to select the editor group 2. This group will be your css group. Now in this group press control+shift + e to open the file explorer. Open the file index.css. At the top of the css file type @import "droptext.css". </p> 
+<p>
+After the body  css add the following css: .mycontainer {
                     width: 500px;
                     border-style: solid;
                     border-width: 5px;
-                }} I do the border because I have some vision and it shows me the container. I will remove the border later on. Border is optional.>
-                <p>Now your drop panel is constrained to a smaller space. This is about the size of many smart phones, so a good size to contain our design. </p>
-                <p>Now open the drop-text.css file in editor group 2. Now you have 2 css files in group 2. Simply control+tab to toggle between them. You will now start defining the classes. Drop-panel i set the width: 100%; means max width possible, the container will contain it for you. Later you will rmove the container constrainst and do a more dynamic setting. The heading and button want on 1 line. So do a .drop-head { width: 100%; display: inline-block; This forces them to be on one line. </p>
-                    <p>In order to get heading to left edge and button to right edge I sued the float attribute. .drop-heading { float: left and drop-action-button { float: right;  .</p>
-                        <p>image is contained the button elementI created 2 svg images to use a simple + and minus. You can do this well as <a href="http://blindsvg.com">Blind svg.com </a>.  Really easy to learn. I was creating these within 15 minutes. drop-image and button will require some special svg settings.  filter: inverted(1.0) this reverses the color and fill : none; is done on the image element. These 2 will make it visible on the dark background. I set the width to 1.2rem.  The rem is a root  font measurent. I set the height to slightly larger than the normal font size 1.2 since I am using a heading. in the same line.</p>
-                        <p>Drop-content and all droptext.css settings are in my css file. So refer to them for values.</p>
-                        <p>The drop-content div will not show since it has no data. So let us create some quick data using a loremipsum trick of vsCode.  Type loremipsum100 followed by the tab within the drop-content div. Now 100 characters of gibberish words appears. You can use a smaller number or larger..  This is what I used for min:</p> loremipsum150</p> between starting and ending paragrph elemnt tags.
-                        <p>Now change the class of drop-panel to collapsed and drop-content is still visible to screen readers. That is why you need aria-hidden="true" to hide it from the screen reader as well. Play with it. Have someone with eysight view it for you or use nvda object position/coordinates to locate them.</p>
+                } I do the border because I have some vision and it shows me the container. I will remove the border later. The border is optional.</p>
+                <p>Now your drop panel is constrained to a smaller space. This is about the size of many smart phones, so it's a good size to contain our design. </p>
+                <p>Now open the drop-text.css file in editor group 2. Now you have 2 css files in group 2. Simply control+tab to toggle between them. You will now start defining the classes. i set the Drop-Panel width to 100%. This means that the max width possible, meaning the container will contain it for you. Later you will remove the container constraints - to give you more dynamic settings. We want the heading and button on one line, So do:
+.drop-head { 
+width: 100%; 
+display: inline-block;
+}
+ This will force them to be on one line. 
+</p>
+                    <p>In order to get the heading to the left edge and the button to the right edge I used the float attribute:
+.drop-heading { 
+float: left and drop-action-button { 
+float: right;
+}}
+</p>
+                        <p>
+The buttons contain the plus and minus images I created using an svg creator tool from <a href="http://blindsvg.com">Blind svg.com </a>. I was creating SVG's within 15 minutes, and found it was fairly simple to learn. The drop-image and button will require some special SVG settings: filter: inverted(1.0) - this reverses the color and fill : none; is done on the image element. These two settings will make the image and button visible on a dark background. I set the width to 1.2rem.  The rem is a root  font measurement. I set the height to slightly larger than the normal font size 1.2 since I am using a heading in the same line.
+</p>
+                        <p>Drop-content and all droptext.css settings are in my css file, So refer to those files for values.</p>
+                        <p>The drop-content div will not show since it has no data, so let us create some quick data using a loremipsum trick of vsCode.  Type loremipsum25 followed by the tab key within the drop-content div. Now 25 characters of latin words appear. You can use a smaller number or larger..  This is what I used for min: loremipsum150</p> between starting and ending paragraph tags.
+</p>
+                        <p>Now, if  you change the class of drop-panel to collapsed and drop-content is still visible to screen readers, That is why you need aria-hidden="true" to hide it from the screen reader as well. Play with it. Have someone with eyesight view it for you or use NVDA object position/coordinates to locate them.</p>
             </div>
 </div>
     </div>
@@ -320,7 +336,7 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
 <div id="drop-r02" class="collapsed" >
     <div class="drop-header">
 <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-    Step 3 Start writing javascript
+    Step 3: Start Writing Javascript
 </div>
 <button class="dropActionBtn" aria-controls="drop-r02" aria-expanded="false" name="drop-action-button" aria-level="1">
 
@@ -329,12 +345,12 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
 </div>
 <div name="drop-content"  class="drop-content"  aria-hidden="true">
     <div id="design-content-js">
-    <p>You will need vsCode open and a browser open as well for these javascript instructions. I will not go into exact detail, you can use my code as a reference.</p>
+    <p>You will need VSCode open and a browser open as well for these javascript instructions. I will not go into exact detail, you can use my code as a reference.</p>
     </div>
     <div id="drop-r020" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 3a Link javascript file and verify file is working.
+        Step 3a: Link a Javascript file and verify the file is working.
     </div>
     </div>  
     <button class="dropActionBtn" aria-controls="drop-r020" aria-expanded="false" name="drop-action-button" aria-level="2">
@@ -342,17 +358,14 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     </button>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-addJS">
-            <p>Open the droptext.js file in vsCode in editor group 3 (control + 3). Add a few blank lines. Add Opening and closing braces and a blank line between. Now switch to editor groups 1 where index.html file is located.</p>
+            <p>Open the droptext.js file in VSCode in editor group 3 (control + 3). then Add a few blank lines. Add Opening and closing braces and a blank line between. Now switch to editor group one where the index.html file is located.</p>
     <p>
-        Just above the opening body tag is the head closing tag. Add a blank line and type the following "script[src="./droptext.js"]" followed by the tab key. You should get a script tag open and closing tags.  Your cursor will be in the space between the opening and closing tags. Cursor left to be inside the &gt; symbol. type in the word defer. This tells the browser not to run this file until all resources are loaded. Also implies type="module".  Now your script should be included.
+        Just above the opening body tag is the head closing tag. Add a blank line and type the following "script[src="./droptext.js"]" followed by the tab key. You should get a script tag open and closing tags.  Your cursor will be in the space between the opening and closing tags. Cursor left to be inside the &gt; symbol. type in the word defer. This tells the browser not to run this file until all resources are loaded. It also implies type="module".  Now your script should be included.
     </p>
-    <p>Now verify by adding some html at the bottom of the html file, just above the closing body tag. Type in the following "div#testJava" followed by tab key. Then type "JavaSript is loading..."  " Now you should have a div opening tag and ending tag with the text you typed in between. Save changes and switch to browser and view the index.html. Go to the bottom of the page and you should have the words  "JavaScript is Loading...". If not double check your html.
-        <p>
-    
-        </p>
-    </p>
+    <p>Now verify the Javascript file is included by adding some html at the bottom of the html file, just above the closing body tag. Type in the following "div#testJava" followed by the tab key. Then type "JavaScript is loading..."  " Now you should have a div opening tag and ending tag with the text you typed in between. Save changes and switch to your browser and view the index.html file. Go to the bottom of the page and you should have the words  "JavaScript is Loading...". If not then double check your HTML.
+</p>
     <p>
-        Now switch to the droptext.js file in editor group 3 (ctrl+3). Your cursor should be on the blank line between the curly braces. Type the id you set the for div in the html file "testJava.innerHTML = "JavaScript Loaded successfully!!!!"".   Save changes and Refresh the browser (shift + f5). Now find the text at the bottom.  If JavaScript loaded it should say successfully !!!! what you typed. If you do not see this you have made a mistake somewhere, review and  address it. Thats it.
+        Now switch to the droptext.js file in your editor. You should be in editor group 3 (ctrl+3). Your cursor should be on the blank line between the curly braces. Type the id you set the div in the html to: file "testJava.innerHTML = "JavaScript Loaded successfully!!!!"".   Save changes and Refresh the browser (shift + f5) and find the text at the bottom.  If the JavaScript loaded it should say successfully !!!! If you do not see this you have made a mistake somewhere and need to review and  address it.
     </p>
             
         </div>
@@ -361,7 +374,7 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     <div id="drop-r021" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 3b Blind users will want a Live console.
+        Step 3b: Blind users will want a Live console.
     </div>
     <button class="dropActionBtn" aria-controls="drop-r021" aria-expanded="false" name="drop-action-button" aria-level="2">
     
@@ -371,28 +384,26 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-live-console">
 <p>
-    People with eyesight open the developers console alongside their web page they are developing. So they get instant feed back on mistakes and more. I find it essential to get theis quick feedback as well. So I just make my own developer's console that is automatically read by my screen reader. Only a few minor changes and your off. 
+    Sighted people will often open the developer console alongside their web page they are developing so they can get instant feedback on the progress of their development work. I find it essential to get this quick feedback as well. So, what I do, is make my own developer's console that is automatically read by my screen reader. Only a few minor changes and you'll be off and running with a screen reader accessible development console too. 
 </p>
 <p>
-    Now that div code where you put thtml to tell if you loaded the js. Make the following changes:
+    In that div where you put the HTML code to tell you if you loaded the Javascript properly Make the following changes:
     <ul>
-        <li>Change the div id from "testJave to "aria-status-div" in order to by like me.</li>
-        <li>Add atribute role="alert". This makes the contents with come alive with screen readers.</li>
-        <li>Add atrtribute to the dive "aria-hiden="false"".  This will be used later to hide from your clients when showing page or testing layouts."</li>
-       <li>Remove test within the tags and ad the following "div#statusalert" followed by tab. This the id we will use for our console.    </li> 
-       <li>Now in editor group 3 the droptext.js file. add the following at the top of the javascript file.  "const alertStatus = document.selector("alertStatus");</li>
-       <li>
-        Now replace that line we had earlier  between the curly braces with "alertStatus.innerHTML = "We are now talking!!!"."
-       </li>
+        <li>Change the div id from "testJave to "aria-status-div" - in order to be like me.</li>
+        <li>Add the atribute role="alert" - This makes the console contents come alive with screen readers.</li>
+        <li>Add the attrtribute aria-hidden="false" -  This will be used later to hide from your clients when showing pages or testing layouts."</li>
+       <li>Remove test within the tags and ad the following "div#statusalert" followed by tab. This should be the id we will use for our console.    </li> 
+       <li>In editor group 3 of the droptext.js file, add the following at the top of the javascript file:  const alertStatus = document.selector("alertStatus");</li>
+       <li>Also replace the line we had earlier  between the curly braces with alertStatus.innerHTML = "We are now talking!!!"</li>
     </ul>
 
-    <p>Save changes and view it in the browser.  Pres (ctrl+f5).  You should hear "We are talking now". Everytime you Reload (ctrl+f5).
+    <p>Save changes and view it in the browser.  Pres (ctrl+f5).  You should hear "We are talking now" everytime you Reload (ctrl+f5) the page.
     </p>
 </p>
-<p>
-    Now let us create our own console function. I called it sayAlertStatus().  So go above the opening curly braces. Type "function sayAlertStatus( msg) {<br> alertStatus.innerHTML = msg + "&ltbr&gt" + alertStatus.innerHTML; };<br> }". 
+	<p>
+    Now let us create our own console function. I called it sayAlertStatus().  So go above the opening curly braces and type "function sayAlertStatus( msg) {<br> alertStatus.innerHTML = msg + "&ltbr&gt" + alertStatus.innerHTML; };<br> }". 
 </p>
-<p>Now replace the line in between the braces with a call to our new console  Type "sayAlertStatus("I am the one talking now!!!");". Save changes and you should hear it in browser once you reload. Now you have a quick and handy way to debug and verify code is running properly.We will sprinkle this call everywhere and output it to our talking console.
+<p>Now replace the line in between the braces with a call to our new console  Type "sayAlertStatus("I am the one talking now!!!");". Save changes and you should hear it in browser once you reload. Now you have a quick and handy way to debug and verify code is running properly. We will sprinkle this call everywhere and output it to our talking console.
 
 </p>
         
@@ -402,7 +413,7 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     <div id="drop-r022" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 3c Wire up some buttons - click event 
+        Step 3c: Wire up some buttons - click event 
     </div>
     <button class="dropActionBtn" aria-controls="drop-r022" aria-expanded="false" name="drop-action-button" aria-level="2">
     
@@ -412,20 +423,20 @@ You will rely heavily on the keystroke "fold" (control + k, control + l). This t
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-click">
         <p>
-            Create a function called initializeDrop()" move the alertStatus querySelector code here. Change the word Const for alertStatus at the top of the js file to the word "let" This way we can assign the fvalue later. So at top should be "let alertStatus;" Now inside the curly braces call initializeDrop();, just above the sayAlerStatus line.  Then verify by saving changes and reloading browser." Now you have a place to put all your initialize code.
+            Create a function called initializeDrop()" move the alertStatus querySelector code here. Change the word Const for alertStatus at the top of the js file to the word "let" so we can assign the fvalue later. At the top of the JS file should now be "let alertStatus;" and inside of the curly braces call initializeDrop();, just above the sayAlertStatus line.  Then verify by saving changes and reloading the browser. Now you have a place to put all your initialize code.
         </p>
         <p>
-Now replace all the code between the curly braces with "document.addEventListener("DOMContentLoaded",(e) => {initializeDrop();})".
-This now will cause the browser to call this initializeDrop everytime you press f5. This makes it a good place to put a lot of code.  We will no longer modify the code between the curly braces.  So go to the initializeDrop function and add a sayAlerStatus("I am initializing"); Make sure not to call the sayAlertStatus until the alertStatus querySelector is set. Just a good practice.
+Replace all the code between the curly braces with "document.addEventListener("DOMContentLoaded",(e) => {initializeDrop();})".
+This now will cause the browser to call this initializeDrop everytime you press f5. This makes it a good place to put a lot of code.  We will no longer modify the code between the curly braces.  So go to the initializeDrop function and add a sayAlertStatus("I am initializing"); and make sure not to call the sayAlertStatus until the alertStatus querySelector is set. It's a good practice.
         </p>
         <p>
-            Now youou will have muliple drop panels with drop-action-buttons on them.  They all will have a name attribute. So we need an array of of these buttons so that we can attach something to the click event.
+            Now you will have multiple drop panels with drop-action-buttons on them.  They all will have a name attribute. We will need an array of these buttons so that we can attach them to the click event.
         </p>
         <p>
-           Now add the following line: "const btns = document.querySelectorAll(`[name="drop-action-button"]`);" . This will return an array of buttons. Currently we are still developing so it will be an array of 1 buttton.  You will nedd to verify that there is data in the array. if (btns)  will do this check.
+           Now add the following line: "const btns = document.querySelectorAll(`[name="drop-action-button"]`);" . This will return an array of buttons. Currently we are still developing this project so it will be an array of 1 buttton.  You will needd to verify that there is data in the array if (btns)  will do this check.
         </p>
         <p>
-        Now we will add the click event. So let us type "btns.forEach((btn) =&gt { sayAlertStatus("You clicked me!!!")});". Now save changes and reload browser. Now locate the button you created and click it.  You should here "You Click me!!". Congratualations you wired a button up. 
+        Now we will add the click event. So let us type "btns.forEach((btn) =&gt { sayAlertStatus("You clicked me!!!")});". Save changes and reload the browser. Locate the button you created and click it.  You should hear, "You Click me!!" Congratulations, you wired a button up. 
         </p>
     </div>
     </div>
@@ -437,7 +448,7 @@ This now will cause the browser to call this initializeDrop everytime you press 
 <div id="drop-r03" class="collapsed" >
     <div class="drop-header">
 <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-    Step 4  Error handling, navigation, & misc
+    Step 4: Error handling, navigation, & misc
 </div>
 <button class="dropActionBtn" aria-controls="drop-r03" aria-expanded="false" name="drop-action-button" aria-level="1">
 <img src="./images/collapse.svg" alt="Collapse drop panel level1" class="drop-image" name="drop-image">
@@ -447,7 +458,7 @@ This now will cause the browser to call this initializeDrop everytime you press 
     <div id="drop-r030" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 4a Error Handling
+        Step 4a: Error Handling
     </div>
     <button class="dropActionBtn" aria-controls="drop-r030" aria-expanded="false" name="drop-action-button" aria-level="2">
     
@@ -456,12 +467,12 @@ This now will cause the browser to call this initializeDrop everytime you press 
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-error">
-    <p>You always have the ability to sayAlertStatus(msg to get some kind of feed back. It is so easy. Add sayAlertStatus line save, reload browse. Now you sould hear it. That easy and fast.</p>
+    <p>You always have the ability to sayAlertStatus(msg to get some kind of feedback. It is so easy. Add a sayAlertStatus line, save the file, refresh your browser. </p>
     <p>
-        Try catch are always great at catching some of those elusive errors. So add them especially in more complex functionns.  The catch error you will want to sayAlertStatus the stack trace (error.stack). Then output error.message. This way when you hear it you can go to it. It is under a Heading level 5. So press the 5 key if you are using a screen reader. Cursor down from there and git the line number and description.  
+        Try catch are always great at catching some of those elusive errors, So add them especially in more complex situations.  The catch error you may want to send to sayAlertStatus (error.stack). so you might Then gain more meaningful information. This way when you hear it you can jump to the accessible console. The accessible console is at a Heading level 5. Arrow down from there and retrieve the line number and description.  
     </p>
     <p>
-        JavaScript is always a bit of a pain. Golden rule is write small and check if it is on track. Javascript can send down an agonizing path if ou go to deep. It is a runtime language and that is one of the dropbacks. I prefer TypeScript  which is coding time error checking. That means you catch possible errors earlier and it forces you to learn good programming habits. Also as a blind programmer I love the completion capabilities in vsCode that are not as accurate in JavaScript.
+        JavaScript can be a bit of a pain. The golden rule is to write small alerts throughout your code and check if your code is acting as expected. Javascript can send you down an agonizing path if you go too deep. It is a runtime language and that is one of the drawbacks. I prefer TypeScript  which does coding time error checking. That means you catch possible errors earlier and it forces you to learn good programming habits. Also, as a blind programmer, I love the completion capabilities in VSCode that seem to be more accurate in TypeScript as compared to JavaScript.
     </p>
     </div>
     </div>
@@ -469,7 +480,7 @@ This now will cause the browser to call this initializeDrop everytime you press 
     <div id="drop-r031" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 4b Navigation
+        Step 4b: Navigation
     </div>
     <button class="dropActionBtn" aria-controls="drop-r031" aria-expanded="false" name="drop-action-button" aria-level="2">
     
