@@ -7,4 +7,4 @@ View the [Drop Text Tutorial Page here.](https://lewislwood.github.io/drop-text-
 Open MIT Source License
 
 By *__Lewis L. Wood__*
-Edited by [davidengebretson](https://github.com/davidengebretson)
+Edited by [Davidengebretson](https://github.com/davidengebretson)
