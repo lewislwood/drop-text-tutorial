@@ -423,20 +423,25 @@ The buttons contain the plus and minus images I created using an svg creator too
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-click">
         <p>
-            Create a function called initializeDrop()" move the alertStatus querySelector code here. Change the word Const for alertStatus at the top of the js file to the word "let" so we can assign the fvalue later. At the top of the JS file should now be "let alertStatus;" and inside of the curly braces call initializeDrop();, just above the sayAlertStatus line.  Then verify by saving changes and reloading the browser. Now you have a place to put all your initialize code.
+            Create a function called initializeDrop() and move the alertStatus querySelector code to this function. Change the word "Const" for alertStatus at the top of the js file to the word "let" so we can assign the fvalue later. The top of the JS file should now be "let alertStatus;". Inside of the curly braces call initializeDrop(); just above the sayAlertStatus line. Then verify your changes by saving the changes and reloading the browser. Now you should have a place to put all of your initialize code.
         </p>
         <p>
-Replace all the code between the curly braces with "document.addEventListener("DOMContentLoaded",(e) => {initializeDrop();})".
-This now will cause the browser to call this initializeDrop everytime you press f5. This makes it a good place to put a lot of code.  We will no longer modify the code between the curly braces.  So go to the initializeDrop function and add a sayAlertStatus("I am initializing"); and make sure not to call the sayAlertStatus until the alertStatus querySelector is set. It's a good practice.
+Replace all of the code between the curly braces with: 
+document.addEventListener("DOMContentLoaded",(e) => {
+initializeDrop();})".
+This now will cause the browser to call this initializeDrop everytime you press f5. This makes it a good place to put a lot of code.  We will no longer modify the code between the curly braces.  So go to the initializeDrop function and add a sayAlertStatus("I am initializing"); and then make sure not to call the sayAlertStatus function until the alertStatus querySelector is set. It's a good practice.
         </p>
         <p>
-            Now you will have multiple drop panels with drop-action-buttons on them.  They all will have a name attribute. We will need an array of these buttons so that we can attach them to the click event.
+            You will now have multiple drop panels with drop-action-buttons on them.  They all will have a name attribute. We will need an array of these buttons so that we can attach them to the click event.
         </p>
         <p>
-           Now add the following line: "const btns = document.querySelectorAll(`[name="drop-action-button"]`);" . This will return an array of buttons. Currently we are still developing this project so it will be an array of 1 buttton.  You will needd to verify that there is data in the array if (btns)  will do this check.
+           Now add the following line: const btns = document.querySelectorAll(`[
+name="drop-action-button]`);
+ . This will return an array of buttons. Currently we are still developing this project so it will be an array of 1 buttton.  You will needd to verify that there is data in the array if (btns)  will do this check.
         </p>
         <p>
-        Now we will add the click event. So let us type "btns.forEach((btn) =&gt { sayAlertStatus("You clicked me!!!")});". Save changes and reload the browser. Locate the button you created and click it.  You should hear, "You Click me!!" Congratulations, you wired a button up. 
+        To add the click event Let's type btns for Each click event: (btn) =&gt { 
+sayAlertStatus("You clicked me!")});". Save changes and reload the browser. Locate the button you created and click it.  You should hear, "You Clicked me!" Congratulations, you wired a button up. 
         </p>
     </div>
     </div>
@@ -467,7 +472,7 @@ This now will cause the browser to call this initializeDrop everytime you press 
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-error">
-    <p>You always have the ability to sayAlertStatus(msg to get some kind of feedback. It is so easy. Add a sayAlertStatus line, save the file, refresh your browser. </p>
+    <p>You'll always have the ability to sayAlertStatus(msg to get some kind of feedback. It is so easy. Add a sayAlertStatus line, save the file, refresh your browser. </p>
     <p>
         Try catch are always great at catching some of those elusive errors, So add them especially in more complex situations.  The catch error you may want to send to sayAlertStatus (error.stack). so you might Then gain more meaningful information. This way when you hear it you can jump to the accessible console. The accessible console is at a Heading level 5. Arrow down from there and retrieve the line number and description.  
     </p>
@@ -490,18 +495,18 @@ This now will cause the browser to call this initializeDrop everytime you press 
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
         <div id="design-content-nav">
     <p>
-        I cannot emphasize how import code navigation is when developing. It would be impossible to do some of the more complex projects I have been coding. The HTML on this project is so large and complicated in navigation, it took all my abilities and then  some.
+        I cannot emphasize how important code navigation is when developing. It would be impossible to do some of the more complex projects I have been coding without it. The HTML in this project is so large and complicated regarding navigation that it took all of my abilities and then  some to complete the project.
     </p>
     <p>
-Object navigation is awesome. HTML  you can object navigate by ids or classes. You can enter "#drop-r02"  or ".classname" or a tagname. So finding your tag is easier.
-css Object navigation lists all the media selectonrs. So jump right to <it class="JavaScript Object Naviagion lists all functions and variables. so just start typing. When you are over it, pres enter and you go right to it."></it>
-
+Object navigation using screen readers is awesome. In HTML  you can object navigate by ids or classes. You can enter "#drop-r02"  or ".classname" or a tagname. So finding your tag is fairly easy with familiarity.
+css Object navigation lists all of the media selectors, so you can jump directly to them.
     </p>
     <p>
-        Brace matching (ctrl+shift+"\")). CSS and js files are much easier when you use brace navigation. Press ctrl+shift+"\" and it will find matching pairs for any of the following: {}[]().  Makes it really easy to help track down those pesky " errors where you are missing are too many closing} ' or other. I simply press this key when on the brace and go to the matching one. If it is not where I was supposed to end up, I need to add or subtract a "}" to balance it.s 
+        Brace matching (ctrl+shift+'\') help make development more simple. CSS and js files are much easier to develop when you use brace matching. Press ctrl+shift+'\' and VSCode will find matching pairs for any of the following: {}[](). It makes it much simpler to help track down those pesky "errors" where you might be missing closing syntax. 
     </p>
     <p>
-        The final useful navigation/edit super handy feature is folding code.  Sighted use that mouse to fold code, copy, cut, move, paste.  We simply fold the code to 2 lines of code. selct both lines and copy, cut, or just move past it. Since it is folded you only have to cursor past 2 lines and not 20 lines of code.  Also nice feature you know folded code is balanced at the outer matching items. HTML folding is absolutely neccessary and not that possible without utilizineg it. This page has many lines and sections of html, so I utilized folding alot.
+        The final useful navigation/edit super handy feature is that of "folding code." Sighted people use the mouse to fold code, copy or cut the code within the folds they create, and then they can paste the miltiple folded lines of code to where they want them to be placed. 
+This tutorial has many lines and sections of html, so, as a blind person, I utilized folding alot and it's equitably effective using a screen reader with the keyboard shortcuts I've outlined above.
     </p>
     </div>
     </div>
@@ -509,7 +514,7 @@ css Object navigation lists all the media selectonrs. So jump right to <it class
     <div id="drop-r032" class="collapsed" >
         <div class="drop-header">
     <div tabindex="0" class="drop-heading" role="heading" aria-level="3" name="drop-heading">
-        Step 4c Miscellaneous & Notes
+	        Step 4c: Miscellaneous & Notes
     </div>
     <button class="dropActionBtn" aria-controls="drop-r032" aria-expanded="false" name="drop-action-button" aria-level="2">
     
@@ -518,30 +523,29 @@ css Object navigation lists all the media selectonrs. So jump right to <it class
     </div>
     <div name="drop-content"  class="drop-content"  aria-hidden="true">
     <div id="design-content-misc">
-<p><u><em>Enhancement considerations</em></u></p>
+<p><b>Enhancement Considerations></b></p>
         <p>
-            Converting drop-content into json content. This would make it where somebody could dynamically edit and put revised content on the fly.  But why do HTML since this will limit editors.  Also markdown is so much better. 
+            Converting drop-content into JSON content: This would make it where somebody could dynamically edit and put revised content on the fly.  Why write HTML since this will limit editors? Also, markdown is so much more fluent and congruent with modern design techniques.</p>
+        <p>
+            Markdown enhancements would have files such as "drop-r020.md" stored in a special folder like "/drop-content." Now only an editor needs to be able to edit markdown. The developer will read the md files and convert them to HTML. The HTML developer places the files into the appropriate places. This will simplify the JSON process dynamically each time a button is expanded. 
         </p>
         <p>
-            Markdown enhancement would have files such as "drop-r020.md" stored in a special folder like "/drop-content. Now only and editor needs to be able to edit markdown. Developer reads the md files and converts them to html places them in appropiate place. This can be the json process dynamically each time it is expanded. "
-        </p>
-        <p>
-            The above enhancements drawbacks are that SEO (search engines like googled not able to index the content. Similar as some react. Besides you might as well rewrite it in React
-        </p>
+            The drawbacks of the above enhancements are that SEO (Search Engine Optimization) might not be able to index the content.
+</p>
         <p><em><u>Key Handling</u></em></p>
         <p>
             I added a windows key-up event listener in the initializeDrop() function. You use key-up, because their are too many events on key-down and the user maybe in the middle of pressing a modifier key (alt, ctrl, shift, ...). 
-            As with almost all event listeners you create, you will want to prevent  default proccessing of that event. Otherwise, other things will happen.  Sometimes that is desirable, so try it with and without. So in most cases it is e.preventDefault(); .  
+            As with almost all event listeners you create, you will want to prevent  default processing of that event. Otherwise, other things will happen.  Sometimes that is desirable, so try it with and without. So in most cases it is e.preventDefault(); .  
         </p>
         <p><em><u>Drop Content I opted for</u></em></p>
         <p>
-I created a seperate html file called design.html. Where I would stage the contents of one drop-content and generate the content html. This way I could easily edit and format it. Also editor can review it as well. 
+I created a seperate html file called design.html. Where I stage the contents of one drop-content and generate the content html so This way I could easily edit and format. Editors can review it as well. 
         </p>
 <p>
-    Implementation of this proccess is as follows. The design html I create a new div inside the container div. This container I set to 500px, since this is the typical and optimal responsive desgn width. Now my div I create I give it an id of "design-content-&ltcustom value&gt".  That way in Object navigation I can search by "#design-content" and get a list of all my design contient divs."
-    Type: "div#design-content-msc" followed by tab. Will create &ltdiv id="design-content-misc"$gt. Now I crate my content within.  When done simply fold cut and paste in drop-content div.  Another advantage my screen reader handles smaller files better and less annoying.
+    Implementation of this process is as follows: The file design html I create a new div inside of the container div. This container I set to 500px, since this is the typical and optimal responsive design width. The div I create I give an id of "design-content-&ltcustom value&gt".  so in Object navigation I can search by "#design-content" and get a list of all of my design divs."
+    Type: "div#design-content-msc" followed by tab. Will create &ltdiv id="design-content-misc"$gt. Now I create my content within.  When done simply fold cut and paste in the drop-content div.  Another advantage my screen reader handles smaller files better and are less annoying.
 </p>
-<p>*** Note: you can view my last design edit by replacing the index.htmml with design.html and you will see it.    
+<p>*** Note: you can view my last design edit by replacing the index.html with design.html and you will see it.    
 </p>
 
 
