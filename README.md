@@ -7,4 +7,5 @@
 ## Open MIT Source License
 
 ## By *__Lewis L. Wood__*
+
 ### Edited by: [Davidengebretson](https://github.com/davidengebretson)
